@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectRotation : MonoBehaviour
+public class PlayerCamera : MonoBehaviour
 {
-    public float RotationSpeed;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        RotationSpeed = 3;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, RotationSpeed, 0);
+        transform.position = player.transform.position + new Vector3(0, 16, 0);
     }
 }

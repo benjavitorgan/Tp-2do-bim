@@ -2,18 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectRotation : MonoBehaviour
+public class Killer2 : MonoBehaviour
 {
-    public float RotationSpeed;
+    public GameObject clon;
+
     // Start is called before the first frame update
     void Start()
     {
-        RotationSpeed = 3;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, RotationSpeed, 0);
+        clon = Instantiate(gameObject);
+
+        clon.transform.position += new Vector3(0, 5, 0);
+    }
+
+    public void Instantiate ()
+    {
+       
     }
 }
