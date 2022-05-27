@@ -4,24 +4,42 @@ using UnityEngine;
 
 public class Killer2 : MonoBehaviour
 {
-    public GameObject clon;
+    public float speed;
+    public bool toRight;
+    int yOffset;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        toRight = true;
+        yOffset = 1;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        clon = Instantiate(gameObject);
+        if (toRight == true)
+        {
+            transform.position += new Vector3(speed, 0, 0); //Se mueve en x si "toRight" es true
+        }
 
-        clon.transform.position += new Vector3(0, 5, 0);
+        else
+        {
+            transform.position -= new Vector3(speed, 0, 0); //Se mueve en x si "toRight" es false
+        }
+
+        if (transform.position.x > -6) //Si esta a 1 metro de la position de la base se convierte el "toRight" se pone false y se ejecuta el primer else  
+        {
+
+            toRight = false;
+            yOffset++;
+        }
+
+        if (transform.position.x < 6) //Si esta a 1 metro se convierte el "toRight" se pone true y convierte el primer if verdadero y lo hace devuelta
+        {
+            toRight = true;
+            yOffset++;
+        }
+
     }
 
-    public void Instantiate ()
-    {
-       
-    }
 }

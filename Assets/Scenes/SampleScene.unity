@@ -1135,6 +1135,7 @@ MonoBehaviour:
   counter: 0
   vidas: {fileID: 1073697946}
   GO: {fileID: 429643504}
+  nivel: {fileID: 0}
 --- !u!1 &1429734202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,6 +1240,7 @@ GameObject:
   - component: {fileID: 1471595926}
   - component: {fileID: 1471595925}
   - component: {fileID: 1471595924}
+  - component: {fileID: 1471595928}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1313,9 +1315,23 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471595923}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 6.42, y: 0.79, z: 11.03}
+  m_LocalPosition: {x: -6, y: 0.79, z: 11.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
+--- !u!114 &1471595928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471595923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee7faf652698efa4ab9df3f09b81d374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.2
+  toRight: 0
